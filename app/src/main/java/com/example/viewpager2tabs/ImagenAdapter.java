@@ -9,9 +9,21 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class ImagenAdapter extends RecyclerView.Adapter<ImagenAdapter.FotoViewHolder>{
+/**
+ * Adaptador para mostrar imágenes en un RecyclerView.
+ *
+ * @author Samuel
+ * @version 1.1.0
+ * @see Imagen
+ */
+public class ImagenAdapter extends RecyclerView.Adapter<ImagenAdapter.FotoViewHolder> {
     private List<Imagen> imagenes;
 
+    /**
+     * Constructor del adaptador de imágenes.
+     *
+     * @param imagenes La lista de imágenes a mostrar.
+     */
     public ImagenAdapter(List<Imagen> imagenes) {
         this.imagenes = imagenes;
     }
@@ -33,6 +45,9 @@ public class ImagenAdapter extends RecyclerView.Adapter<ImagenAdapter.FotoViewHo
         return imagenes.size();
     }
 
+    /**
+     * ViewHolder para mantener las vistas de las imágenes en un RecyclerView.
+     */
     public static class FotoViewHolder extends RecyclerView.ViewHolder {
         protected ImageView imageView;
 
@@ -41,6 +56,11 @@ public class ImagenAdapter extends RecyclerView.Adapter<ImagenAdapter.FotoViewHo
             imageView = itemView.findViewById(R.id.imageView);
         }
 
+        /**
+         * Vincula una imagen con la vista correspondiente.
+         *
+         * @param imagen La imagen a mostrar.
+         */
         public void bind(Imagen imagen) {
             imageView.setImageResource(imagen.getIdDrawable());
         }

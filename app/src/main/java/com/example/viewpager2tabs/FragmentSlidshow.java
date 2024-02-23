@@ -7,7 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+/**
+ *
+ *
+ * @author Samuel
+ * @version 1.1.0
+ */
 public class FragmentSlidshow extends Fragment {
     public FragmentSlidshow() {
     }
